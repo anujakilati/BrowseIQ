@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Floating Icon Extension",
+  "version": "1.0",
+  "description": "Injects a floating icon like Grammarly.",
+  "permissions": ["scripting"],
+  "host_permissions": ["<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["./assets/index-CB3A_Eox.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
