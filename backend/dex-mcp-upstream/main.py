@@ -12,6 +12,7 @@ import logging
 import signal
 import sys
 from typing import Any, Dict
+import json
 
 from mcp.server.fastmcp import FastMCP
 
@@ -32,7 +33,7 @@ from tools.browser import (
     capture_with_highlights_tool,
     add_assistant_message_tool,
     query_history_by_date_tool,
-    query_interests_by_date_tool
+    generate_browsing_analytics_tool
 )
 
 # Configure logging
@@ -192,25 +193,31 @@ async def query_history_by_date(date: str) -> str:
     logging.info(f"query_history_by_date tool called with date={date}")
     return await query_history_by_date_tool(context, {"date": date})
 
+@mcp.tool()
+def generate_browsing_analytics(output_file: str = "../../data/browsing_analytics.json") -> str:
+    """
+    Analyze what you search for most and your browsing patterns with website frequency data.
+    
+    Perfect for answering questions like:
+    - "What are the things I search for most?"
+    - "Which websites do I visit most frequently?"
+    - "Show me my browsing patterns by category"
+    - "What are my top visited sites?"
+    
+    Returns simplified JSON with only:
+    - domain_frequency: Top domains with visit counts, categories, and percentages
+    - category_breakdown: Website categories with visit counts and percentages
+    
+    Perfect for pie chart visualization of browsing habits and search patterns.
+    
+    Args:
+        output_file: Path where the analytics JSON file will be saved (default: backend/data/browsing_analytics.json)
+    
+    Returns:
+        JSON with domain_frequency and category_breakdown data including percentages for pie charts
+    """
+    return generate_browsing_analytics_tool(output_file)
 
-# Add to imports at the top
-@mcp.tool(
-    name="query_interests_by_date",
-    description=(
-        "IMPORTANT: Use this tool whenever a user asks about their interests or topics they browsed on a specific date. "
-        "This tool analyzes browsing history to identify the top 5 interests for ANY date-related query about interests. "
-        "Keywords that should trigger this tool: 'interests', 'topics', 'themes', 'subjects', 'browsed', 'looked at'. "
-        "Date formats supported: YYYY-MM-DD (e.g., '2025-05-24') or natural language (e.g., 'May 24th, 2025'). "
-        "ALWAYS use this tool for interest analysis queries instead of saying you don't have access to browsing data. "
-        "Example queries that MUST use this tool: "
-        "'What were my interests on May 24th, 2025?', "
-        "'Show me what topics I was interested in on 2025-05-24.', "
-        "'What did I browse about on May 24th?'"
-    )
-)
-async def query_interests_by_date(date: str) -> str:
-    """Analyze top interests from browsing history for a specific date."""
-    return await query_interests_by_date_tool(context, {"date": date})
 
 
 async def start_background_services():

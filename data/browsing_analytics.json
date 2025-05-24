@@ -1,0 +1,131 @@
+{
+  "domain_frequency": [
+    {
+      "domain": "google.com",
+      "visits": 37,
+      "category": "Other",
+      "percentage": 26.8
+    },
+    {
+      "domain": "accounts.google.com",
+      "visits": 25,
+      "category": "Other",
+      "percentage": 18.1
+    },
+    {
+      "domain": "github.com",
+      "visits": 13,
+      "category": "Technology",
+      "percentage": 9.4
+    },
+    {
+      "domain": "chromewebstore.google.com",
+      "visits": 8,
+      "category": "Technology",
+      "percentage": 5.8
+    },
+    {
+      "domain": "myaccount.google.com",
+      "visits": 7,
+      "category": "Other",
+      "percentage": 5.1
+    },
+    {
+      "domain": "wired.com",
+      "visits": 6,
+      "category": "News & Media",
+      "percentage": 4.3
+    },
+    {
+      "domain": "app.getdexterity.com",
+      "visits": 3,
+      "category": "News & Media",
+      "percentage": 2.2
+    },
+    {
+      "domain": "joindex.com",
+      "visits": 3,
+      "category": "Other",
+      "percentage": 2.2
+    },
+    {
+      "domain": "nbcnews.com",
+      "visits": 3,
+      "category": "News & Media",
+      "percentage": 2.2
+    },
+    {
+      "domain": "thesanfranciscopeninsula.com",
+      "visits": 3,
+      "category": "Other",
+      "percentage": 2.2
+    },
+    {
+      "domain": "unknown",
+      "visits": 2,
+      "category": "Other",
+      "percentage": 1.4
+    },
+    {
+      "domain": "reddit.com",
+      "visits": 2,
+      "category": "Social Media",
+      "percentage": 1.4
+    },
+    {
+      "domain": "developer.chrome.com",
+      "visits": 2,
+      "category": "Technology",
+      "percentage": 1.4
+    },
+    {
+      "domain": "docs.google.com",
+      "visits": 2,
+      "category": "Technology",
+      "percentage": 1.4
+    },
+    {
+      "domain": "boldai.net",
+      "visits": 2,
+      "category": "Other",
+      "percentage": 1.4
+    }
+  ],
+  "category_breakdown": [
+    {
+      "category": "Other",
+      "visits": 51,
+      "percentage": 37.0
+    },
+    {
+      "category": "Search",
+      "visits": 38,
+      "percentage": 27.5
+    },
+    {
+      "category": "Technology",
+      "visits": 26,
+      "percentage": 18.8
+    },
+    {
+      "category": "News & Media",
+      "visits": 15,
+      "percentage": 10.9
+    },
+    {
+      "category": "Social Media",
+      "visits": 5,
+      "percentage": 3.6
+    },
+    {
+      "category": "E-commerce",
+      "visits": 2,
+      "percentage": 1.4
+    },
+    {
+      "category": "Business Tools",
+      "visits": 1,
+      "percentage": 0.7
+    }
+  ]
+}
