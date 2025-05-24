@@ -19,6 +19,10 @@ function App() {
     }
 
     document.addEventListener("focusin", handleFocus);
+   
+
+
+    handleFocus({ target: document.activeElement });
     return () => document.removeEventListener("focusin", handleFocus);
   }, []);
 

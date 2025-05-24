@@ -2,6 +2,15 @@
   "manifest_version": 3,
   "name": "Floating Icon Extension",
   "version": "1.0",
+
+  "omnibox": {
+    "keyword": "iq"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+
+
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
@@ -9,7 +18,10 @@
       "run_at": "document_idle"
     }
   ],
+  
+
+
   "host_permissions": ["<all_urls>"],
-  "permissions": ["scripting"]
+  "permissions": ["scripting", "storage"]
 }
 
