@@ -8,10 +8,10 @@ function App() {
   useEffect(() => {
     function handleFocus(e) {
       if (
-        e.target.tagName === "TEXTAREA" ||
-        (e.target.tagName === "INPUT" && e.target.type === "text")
+        e.target.matches("textarea, input[type=text], input[type=search]")
         
       ) {
+        console.log("🔍 focusing search or text input");
         setTarget(e.target);
       } else {
         setTarget(null);
